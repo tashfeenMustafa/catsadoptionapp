@@ -8,4 +8,4 @@ Learn more about the API at https://thecatapi.com/
 and offers them up in the front-end using Pagination from MUI.
 - An About Us Page
 
-To check out the app in production, visit here.
+To check out the app in production, visit here https://tashfeenmustafa.github.io/.
