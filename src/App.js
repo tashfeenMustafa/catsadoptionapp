@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Template from './pages/Template.js';
+import Home from './pages/Home.js';
+import AboutUs from './pages/AboutUs.js';
+import SearchCats from './pages/SearchCats.js';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="*"
+          element={<h1>404 Error! Looks like you're lost.</h1>} />
+        <Route
+          path="/" element={<Template />}>
+            <Route 
+              index element={<Home />} />
+            <Route 
+              path="/about-us" element={<AboutUs />} />
+            <Route 
+              path="/search-cats-for-adoption" element={<SearchCats />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
