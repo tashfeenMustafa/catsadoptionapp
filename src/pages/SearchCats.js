@@ -101,7 +101,7 @@ const SearchCats = () => {
       </section>
       <section>
         <form className='FlexContainer'>
-          <label htmlFor={'select-breed'}>{'Select A Cat Breed To Adopt'}</label>
+          <label htmlFor={'select-breed'}>{'Find a cat or kitten to adopt based on breed'}</label>
           <select onChange={onSelectChange} name={'select-breed'} id={'select-breed'}>
             {
               breeds && breeds.map((breed) => {
@@ -158,6 +158,19 @@ const SearchCats = () => {
             page={page} 
             onChange={handlePaginationChange} />
         </Stack>
+      </section>
+      <section>
+        <h2>
+          Finding out where to adopt cats near you has never been easier
+        </h2>
+        <p>
+          Using our search tool, you no longer need to look for stray cats to adopt near your area. We maintain relationships
+          with a wide network of cat shelters, clinics, and stores to find you cats to adopt near your location. 
+        </p>
+        <p>
+          Let us worry about where and how to rescue cats while you focus on adopting cats and kittens that fit right into
+          your home and lifestyle.
+        </p>
       </section>
     </>
   );
